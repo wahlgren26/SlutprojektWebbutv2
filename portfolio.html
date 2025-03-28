@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min CV-webbplats | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome för ikoner -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Mitt CV</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Hem</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Om mig</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portfolio-header py-5 bg-light">
+            <div class="container text-center">
+                <h1 class="display-4 mb-3">Min Portfolio</h1>
+                <p class="lead">Här är några av mina bästa projekt</p>
+            </div>
+        </section>
+
+        <section class="portfolio-filter py-3">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <div class="btn-group" role="group" aria-label="Portfolio filter">
+                        <button type="button" class="btn btn-outline-primary active filter-btn" data-filter="all">Alla</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="java">Java</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="php">PHP</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-projects py-5">
+            <div class="container">
+                <div class="row g-4 portfolio-items">
+                    <!-- Projekt 1: Snake -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="java">
+                        <div class="card h-100">
+                            <img src="img/snake.png" class="card-img-top" alt="Snake-spel" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Snake-spel</h5>
+                                <p class="card-text flex-grow-1">Ett klassiskt Snake-spel utvecklat i Java med GameFrame, GamePanel och objektorienterad design. Slutprojekt i kursen Programmering 2.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#snakeModal">Mer info</button>
+                                    </div>
+                                    <small class="text-muted">Java</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projekt 2: Yatzy -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="java">
+                        <div class="card h-100">
+                            <img src="img/yatzy.png" class="card-img-top" alt="Yatzy-spel" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Yatzy-spel</h5>
+                                <p class="card-text flex-grow-1">En fullständig implementation av det klassiska tärningsspelet Yatzy utvecklat i Java med alla spelets regler och funktioner. Slutprojekt i kursen Programmering 1.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#yatzyModal">Mer info</button>
+                                    </div>
+                                    <small class="text-muted">Java</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projekt 3: Fordonsregister -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="php">
+                        <div class="card h-100">
+                            <img src="img/fordonsregister.png" class="card-img-top" alt="Fordonsregister" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Fordonsregister</h5>
+                                <p class="card-text flex-grow-1">Ett webbbaserat fordonsregister utvecklat i PHP med databaskoppling för att hantera och spåra olika typer av fordon. Projekt i kursen Webbserverprogrammering 2.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#fordonsregisterModal">Mer info</button>
+                                    </div>
+                                    <small class="text-muted">PHP</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modaler för projektdetaljer -->
+        <!-- Snake Modal -->
+        <div class="modal fade" id="snakeModal" tabindex="-1" aria-labelledby="snakeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="snakeModalLabel">Snake-spel</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/snake.png" class="img-fluid" alt="Snake-spel" loading="lazy">
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Projektbeskrivning</h5>
+                                <p>Ett klassiskt Snake-spel där spelaren styr en orm som växer när den äter mat. Spelet använder en objektorienterad struktur med GameFrame och GamePanel för att skapa spellogiken.</p>
+                                
+                                <h5>Teknologier</h5>
+                                <ul>
+                                    <li>Java</li>
+                                    <li>Swing för grafiskt gränssnitt</li>
+                                    <li>Objektorienterad programmering</li>
+                                    <li>Kollisionsdetektering</li>
+                                </ul>
+                                
+                                <h5>Min roll</h5>
+                                <p>Jag utvecklade hela spelet från grunden som slutprojekt i kursen Programmering 2. Projektet omfattade design av spellogik, grafik och användarinteraktion.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Stäng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yatzy Modal -->
+        <div class="modal fade" id="yatzyModal" tabindex="-1" aria-labelledby="yatzyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="yatzyModalLabel">Yatzy-spel</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/yatzy.png" class="img-fluid" alt="Yatzy-spel" loading="lazy">
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Projektbeskrivning</h5>
+                                <p>En fullständig implementation av det populära tärningsspelet Yatzy där spelaren kan kasta tärningar och fylla i ett protokoll enligt spelets regler. Spelet har alla funktioner som finns i den traditionella versionen av Yatzy.</p>
+                                
+                                <h5>Teknologier</h5>
+                                <ul>
+                                    <li>Java</li>
+                                    <li>Swing för användargränssnitt</li>
+                                    <li>Objektorienterad design</li>
+                                    <li>Slumptalsgenerering</li>
+                                </ul>
+                                
+                                <h5>Min roll</h5>
+                                <p>Jag utvecklade hela spelet självständigt som slutprojekt i kursen Programmering 1. Detta inkluderade spellogik, poängberäkning och gränssnittsdesign.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Stäng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fordonsregister Modal -->
+        <div class="modal fade" id="fordonsregisterModal" tabindex="-1" aria-labelledby="fordonsregisterModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="fordonsregisterModalLabel">Fordonsregister</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <div id="fordonsregisterCarousel" class="carousel slide bg-light" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#fordonsregisterCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#fordonsregisterCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                    <div class="carousel-inner rounded border border-dark">
+                                        <div class="carousel-item active">
+                                            <img src="img/fordonsregister.png" class="d-block w-100" alt="Fordonsregister bild 1" loading="lazy">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/fordonsregister2.png" class="d-block w-100" alt="Fordonsregister bild 2" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#fordonsregisterCarousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon bg-secondary rounded-circle" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Föregående</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#fordonsregisterCarousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon bg-secondary rounded-circle" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Nästa</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <h5>Projektbeskrivning</h5>
+                                <p>Ett webbbaserat fordonsregister som låter användare lägga till, redigera, söka och ta bort fordonsinformation. Systemet stödjer olika fordonstyper och lagrar data i en MySQL-databas.</p>
+                                
+                                <h5>Teknologier</h5>
+                                <ul>
+                                    <li>PHP</li>
+                                    <li>MySQL</li>
+                                    <li>HTML, CSS (Bootstrap)</li>
+                                    <li>CRUD-operationer</li>
+                                    <li>Sessionshantering för autentisering</li>
+                                </ul>
+                                
+                                <h5>Min roll</h5>
+                                <p>Jag utvecklade hela applikationen som en del av kursen Webbserverprogrammering 2. Projektet fokuserade på att skapa en användarvänlig gränssnitt för databashantering och implementera säker dataåtkomst.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Stäng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Malte Svärd Wahlgren. Alla rättigheter förbehållna.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://github.com/wahlgren26" class="text-white me-3" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/malte-sv%C3%A4rd-wahlgren-3559452ba/" class="text-white me-3" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.x.com/cfcgren26" class="text-white me-3" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="mailto:malte.wahlgren.hbg@gmail.com" class="text-white"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Egna skript -->
+    <script src="js/script.js"></script>
+</body>
+</html> 
